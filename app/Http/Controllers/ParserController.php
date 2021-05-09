@@ -8,15 +8,15 @@ use Illuminate\Http\Request;
 
 class ParserController extends Controller
 {
-	/** @var MosecomService $mosecomService */
+    /** @var MosecomService $mosecomService */
     private $mosecomService;
 
     public function __construct(MosecomParserService $mosecomParser)
     {
-        $this->mosecomService = $mosecomService;
+        $this->mosecomParser = $mosecomParser;
     }
 
-	/**
+    /**
      * @param string $name
      *
      * @return array
