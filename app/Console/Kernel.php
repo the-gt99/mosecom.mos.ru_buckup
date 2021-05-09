@@ -13,8 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-//        CurrencyParse::class
-    ];
+	//
+	];
 
     /**
      * Define the application's command schedule.
@@ -25,6 +25,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('parser')->hourly();
+		//
     }
 
     /**
