@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Repositories\MosecomRepositories;
+namespace App\Libraries;
 
 
 class MosecomRepository

@@ -2,25 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\Mosecom\MosecomService;
-use ArrayIterator;
-use CachingIterator;
+use App\Services\Mosecom\MosecomParserService;
 use Illuminate\Http\Request;
 
 class ParserController extends Controller
 {
-    private $mosecomService;
+    private $mosecomParser;
 
-    public function __construct(MosecomService $mosecomService)
+    public function __construct(MosecomParserService $mosecomParser)
     {
-        $this->mosecomService = $mosecomService;
+        $this->mosecomParser = $mosecomParser;
     }
 
-    /**
-     * @return array
-     */
     public function parse()
     {
-        return $this->mosecomService->parse();
+        $stations = $this->mosecomParser->getStations();
+
+        return $this->mosecomParser->getStationInfoByName($stations[0]);
     }
 }
