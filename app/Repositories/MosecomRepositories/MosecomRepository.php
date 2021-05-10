@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Libraries;
+namespace App\Repositories\MosecomRepositories;
 
 
 class MosecomRepository
@@ -71,7 +71,7 @@ class MosecomRepository
         if(count($headers) > 0) {
             $curlOpt[CURLOPT_HTTPHEADER] = array_merge($curlOpt[CURLOPT_HTTPHEADER], $headers);
         }
-		
+
         curl_setopt_array($this->curl, $curlOpt);
 
         $result = curl_exec($this->curl);
